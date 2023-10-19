@@ -5,11 +5,13 @@ import TabNavigator from './navigation/TabNavigator';
 const App = () => {
 
     return (
+
         <SafeAreaView style={{ flex: 1 }}>
             <NavigationContainer>
                 <TabNavigator />
             </NavigationContainer >
         </SafeAreaView>
+
 
     );
 }
