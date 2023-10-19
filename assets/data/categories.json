@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "categoryNameEng": "Rent / Mortgage",
+        "categoryDescriptionEng": "Rent or mortgage payments for housing.",
+        "categoryNameTr": "Ev Kira / Kredi",
+        "categoryDescriptionTr": "Ev kirası veya ev kredisi ödemeleri.",
+        "iconName":"home"
+    },
+    {
+        "id": 2,
+        "categoryNameEng": "Bills and Utilities",
+        "categoryDescriptionEng": "Expenses for water, electricity, gas, internet, phone bills, etc.",
+        "categoryNameTr": "Fatura ve Hesaplar",
+        "categoryDescriptionTr": "Su, elektrik, gaz, internet, telefon faturaları vb.",
+        "iconName":"utilities"
+    },
+    {
+        "id": 3,
+        "categoryNameEng": "Groceries and Shopping",
+        "categoryDescriptionEng": "Expenses related to food and grocery shopping.",
+        "categoryNameTr": "Yiyecek ve Market Alışverişi",
+        "categoryDescriptionTr": "Yiyecek ve market alışverişi harcamaları.",
+        "iconName":"shopping"
+
+    },
+    {
+        "id": 4,
+        "categoryNameEng": "Transportation",
+        "categoryDescriptionEng": "Vehicle payments, fuel, public transportation expenses, etc.",
+        "categoryNameTr": "Ulaşım",
+        "categoryDescriptionTr": "Araç ödemeleri, yakıt, toplu taşıma harcamaları vb.",
+        "iconName":"transportation"
+    },
+    {
+        "id": 5,
+        "categoryNameEng": "Healthcare",
+        "categoryDescriptionEng": "Health insurance, doctor visits, prescription medications, etc.",
+        "categoryNameTr": "Sağlık",
+        "categoryDescriptionTr": "Sağlık sigortası, doktor ziyaretleri, reçeteli ilaçlar vb.",
+        "iconName":"healtcare"
+    },
+    {
+        "id": 6,
+        "categoryNameEng": "Education",
+        "categoryDescriptionEng": "School fees, books, courses, etc.",
+        "categoryNameTr": "Eğitim",
+        "categoryDescriptionTr": "Okul ücretleri, kitaplar, kurslar vb.",
+        "iconName":"education"
+    },
+    {
+        "id": 7,
+        "categoryNameEng": "Entertainment",
+        "categoryDescriptionEng": "Expenses for dining out, movies, concerts, vacations, etc.",
+        "categoryNameTr": "Eğlence",
+        "categoryDescriptionTr": "Restoranlarda yemek, sinema, konserler, tatiller vb. harcamalar.",
+        "iconName":"entertainment"
+    },
+    {
+        "id": 8,
+        "categoryNameEng": "Clothing and Footwear",
+        "categoryDescriptionEng": "Expenses for clothing, shoes, and accessories.",
+        "categoryNameTr": "Giyim ve Ayakkabı",
+        "categoryDescriptionTr": "Giyim, ayakkabı ve aksesuar alışverişi.",
+        "iconName":"clothing"
+    },
+    {
+        "id": 9,
+        "categoryNameEng": "Insurance",
+        "categoryDescriptionEng": "Expenses for car insurance, home insurance, health insurance, etc.",
+        "categoryNameTr": "Sigorta",
+        "categoryDescriptionTr": "Araç sigortası, ev sigortası, sağlık sigortası vb. için harcamalar.",
+        "iconName":"insurance"
+    },
+    {
+        "id": 10,
+        "categoryNameEng": "Personal Care",
+        "categoryDescriptionEng": "Expenses for cosmetics, haircuts, gym memberships, etc.",
+        "categoryNameTr": "Kişisel Bakım",
+        "categoryDescriptionTr": "Kozmetik ürünleri, kuaför, spor salonu üyelikleri vb. için harcamalar.",
+        "iconName":"personalCare"
+    },
+    {
+        "id": 11,
+        "categoryNameEng": "Pet Care",
+        "categoryDescriptionEng": "Expenses related to pet care (food, vet visits, etc.).",
+        "categoryNameTr": "Hayvan Bakımı",
+        "categoryDescriptionTr": "Evcil hayvanlar için harcamalar (yem, veteriner ziyaretleri vb.).",
+        "iconName":"petCare"
+    },
+    {
+        "id": 12,
+        "categoryNameEng": "Taxes",
+        "categoryDescriptionEng": "Income taxes, property taxes, etc.",
+        "categoryNameTr": "Vergiler",
+        "categoryDescriptionTr": "Gelir vergisi, mülk vergisi vb.",
+        "iconName":"taxes"
+    },
+    {
+        "id": 13,
+        "categoryNameEng": "Other",
+        "categoryDescriptionEng": "A category for any other expenses.",
+        "categoryNameTr": "Diğer",
+        "categoryDescriptionTr": "Diğer harcamalar için özel bir kategori.",
+        "iconName":"other"
+    }
+]
