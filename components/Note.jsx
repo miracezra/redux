@@ -1,17 +1,17 @@
 import { TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icons from '../assets/Icons'
 import styles from '../assets/css/Note.style'
+import { setNot } from '../src/context/Slice'
+import { useDispatch } from 'react-redux'
 
 const Note = () => {
-    
-    const [text, setText] = useState("")
+    const dispatch = useDispatch();
     const [tempText, setTempText] = useState("Not")
-    const handleSave =()=>{
-        setText(tempText)
-    }
-    
-    console.log(text)
+    useEffect(() => {
+        dispatch(setNot(tempText))
+    }, [tempText])
+
     return (
         <View style={styles.container}>
             <View style={styles.icon}>

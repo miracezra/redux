@@ -4,7 +4,9 @@ const styles = StyleSheet.create({
     container: {
         width: width - 35,
         height: width * 0.47,
-        borderRadius: 15
+        borderRadius: 15,
+        justifyContent:"center",
+        alignItems:"center"
     },
     iconBackground: {
         width: 20,
@@ -18,18 +20,17 @@ const styles = StyleSheet.create({
     },
     infoAccount: {
         flexDirection: "column",
-        paddingTop: 20
     },
     infoTotalBalance: {
         fontWeight: "600",
-        fontSize: 37,
+        fontSize: 47,
         textAlign: "center",
         color: "white",
         paddingTop: 7
     },
     totalBalanceTitle: {
         color: "white",
-        fontSize: 16,
+        fontSize: 26,
         textAlign: "center",
         textAlignVertical: "center"
     },

@@ -1,21 +1,26 @@
 import { View, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "../assets/css/Value.style"
-import { useDispatch } from 'react-redux'
-import { setAmount } from '../redux/actions/actions'
+import { useDispatch, useSelector } from 'react-redux'
+import { setAmount } from '../src/context/Slice'
 
 const Value = () => {
-    const [amount,setAmountLocal]=useState('');
     const dispatch = useDispatch();
-    const handleAmountChangge = (value)=>{
-        setAmountLocal(value)
+    const expenses = useSelector((state) => state.expense); //!burası store daki değeri alır
+    const [value, setValue] = useState();
+
+    const handleLocal = (value) => {
+        setValue(value)
+        console.log(expenses)
     }
-    const handleAmountSave = ()=>{
-        dispatch(setAmount(amount))
-    }
+    useEffect(() => {
+        dispatch(setAmount(value))
+    }, [value])
+
+
     return (
         <View style={styles.container}>
-            <TextInput style={styles.textInput} inputMode='numeric' keyboardType='phone-pad' placeholder='$0' onChange={handleAmountChangge} onChangeText={handleAmountSave}/>
+            <TextInput style={styles.textInput} inputMode='numeric' keyboardType='phone-pad' placeholder='$0' onChangeText={handleLocal}  />
         </View>
     )
 }

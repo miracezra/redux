@@ -1,16 +1,15 @@
+const formatDate = (dateString) => {
+  const months = [
+      "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+      "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+  ];
 
-export const formatDate = (date) => {
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    
-    if (date.toDateString() === today.toDateString()) {
-      return 'Today';
-    } else if (date.toDateString() === yesterday.toDateString()) {
-      return 'Yesterday';
-    } else {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return date.toLocaleDateString(undefined, options);
-    }
-  };
-  
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = months[date.getMonth()]; 
+  const year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
+}
+
+export default formatDate;

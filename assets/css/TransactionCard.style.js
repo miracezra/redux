@@ -9,11 +9,13 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         opacity:0.8,
         borderRadius: 15,
-        paddingLeft: 5
+        paddingLeft: 5,
+        marginTop:15
     },
     transactionTitle: {
         fontWeight: "500",
-        paddingLeft:10
+        paddingLeft:10,
+        width:width/2
     },
     price: {
         flexDirection: "column",

@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native'
+import { View, Text, TouchableOpacity, SafeAreaView, Alert } from 'react-native'
 import React from 'react'
 import Categories from '../../../components/Categories'
 import Value from '../../../components/Value'
@@ -12,8 +12,13 @@ import { useSelector } from 'react-redux'
 
 const AddSalary = () => {
 
-  const amountValue = useSelector((state)=>state.amount);
-  console.log("first",amountValue)
+  const title = useSelector(state => state.expense.title);
+  const icon = useSelector(state => state.expense.icon);
+  const date = useSelector(state => state.expense.date);
+  const note = useSelector(state => state.expense.not);
+  const amount = useSelector(state => state.expense.amount);
+
+
   const addDataToFile = async (newData) => {
     const path = '/Users/developer/Desktop/ReduxExample/assets/data/income_expense_data.json';
 
@@ -31,11 +36,19 @@ const AddSalary = () => {
 
   const newData = {
     id: uuid.v4(),
-    transactionTitle: "category.Name",
-    icon: 'category.icon',
-    amount: "amount",
-    date: 'date'
+    transactionTitle: title,
+    icon: icon,
+    amount: amount,
+    date: date,
+    not: note
   };
+  const alertMessage = "Yiyiniz içiniz; fakat israf etmeyiniz! Çünkü Allâh isrâf edenleri sevmez.\n (A´râf Suresi 7/31)";
+  const alert = () =>
+    Alert.alert('Gider Kaydedildi',alertMessage
+      , [
+
+      { text: 'Tamam', onPress: () => console.log('Tamam') },
+    ]);
 
 
 
@@ -52,17 +65,14 @@ const AddSalary = () => {
         <DateSelector />
         <Note />
       </View>
-
-
       <View style={styles.save}>
         <LinearGradient colors={['#4d8ce3', '#d462e0', '#fe8a6c']} start={{ x: 0.0, y: 0.25 }} end={{ x: 0.5, y: 4 }}
           locations={[0.2, 0.5, 0.9]} style={styles.saveButton}>
-          <TouchableOpacity onPress={() => {  addDataToFile(newData); }}>
+          <TouchableOpacity onPress={() => { addDataToFile(newData); alert() }}>
             <Text style={styles.saveButtonText}>KAYDET</Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>
-
     </SafeAreaView>
   )
 }

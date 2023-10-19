@@ -1,18 +1,18 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import AddSalary from '../src/pages/AddSalary/AddSalary';
 import Index from '../src/pages/Index';
 import LinearGradient from 'react-native-linear-gradient';
-import { SafeAreaView, View } from 'react-native';
 import Icons from '../assets/Icons';
 import styles from '../assets/css/TabBarItem.style';
-styles
+import { Provider } from 'react-redux';
+import store from '../src/context/store';
+
 const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
     return (
-        <LinearGradient colors={['#f0dffb', '#ecdada', '#ffe1b7']} style={{ flex: 1 }}>
+        <Provider store={store}>
             <Tab.Navigator>
                 <Tab.Screen
                     name="index"
@@ -30,7 +30,6 @@ function TabNavigator() {
                             }
                         }
                     }
-
                 />
                 <Tab.Screen name="addSalary" component={AddSalary} options={
                     {
@@ -45,7 +44,8 @@ function TabNavigator() {
                     }
                 } />
             </Tab.Navigator>
-        </LinearGradient>
+
+        </Provider>
 
     );
 }
